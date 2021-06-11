@@ -1,0 +1,591 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif;
+}
+
+.container {
+    min-width: 1440px;
+}
+
+#btn{
+    display: none;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    font-weight: bold;
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    background: rgb(52, 211, 235);
+    z-index: 9999;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    opacity: 0.5;
+    &:hover{
+        opacity: 1;
+    }
+    
+}
+a {
+    text-decoration: none;
+    color: #6e6e6e;
+    
+}
+
+li {
+    list-style-type: none;
+}
+
+h5 {
+    color: rgb(52, 211, 235);
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 3.4rem;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+i{
+    // font-size: 4.2rem;
+    color: #FFFFFF;
+    font-family: fontawesome !important;
+    font-style: normal;
+    
+}
+.fa{
+    
+    color: white;
+    margin-right: 10px;
+    // justify-content: space-around;
+    
+}
+
+
+// HEADER
+.header {
+    position: fixed;
+    z-index: 999;
+    // width: 100%;
+    min-height: 60px;
+    font-size: 1.7rem;
+    line-height: 3rem;
+    color: #6e6e6e;
+    position: relative;
+    background-color: black;
+    font-size: 1.5em;
+    &__row {
+        min-height: 60px;
+        display: block;
+    }
+    &__bar {
+        display: block;
+        top: 0px;
+        left: 90px;
+        position: absolute;
+        background-color: black;
+        padding-top: 10px;
+        display: flex;
+        &__logo-text {
+            cursor: pointer;
+            &:hover {
+                color: rgb(52, 211, 235);
+                transition: 0.5s;
+            }
+        }
+    }
+}
+
+// INTRO SECTION
+.parallax {
+    /* The image used */
+    background-image: url(../img/03_zorepad_header.jpg);
+    /* Set a specific height */
+    height: 600px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.intro {
+    &__overlay {
+        height: 100vh;
+        position: relative;
+        
+    }
+    &__name {
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 5%;
+        &__position {
+            color: #FFFFFF;
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin-top: 10px;
+            margin-bottom: 50px;
+            &::after {
+                content: "";
+                height: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                margin-left: 15px;
+            }
+            &::before {
+                content: "";
+                height: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                margin-right: 15px;
+            }
+        }
+        &__btn {
+            padding: 15px 15px;
+            background-color: transparent;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            color: #FFFFFF;
+            font-size: 1rem;
+            text-transform: uppercase;
+            &::after {
+                display: inline-block;
+                content: "˅";
+                height: 10px;
+                width: 10px;
+                line-height: inherit;
+                text-align: center;
+                position: relative;
+                left: 10px;
+                font-weight: bold;
+                margin-right: 5px;
+            }
+            &:hover {
+                border: 3px solid rgb(52, 211, 235);
+                transition: 0.5s;
+            }
+        }
+    }
+}
+
+// ABOUT SECTION
+.about {
+    // height: 800px;
+    &__text {
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 5%;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+    &__description {
+        display: flex;
+        justify-content: space-between;
+        max-width: 80%;
+        margin: 0 auto;
+        // max-width: 80%;
+        padding: 5% 10%;
+        &__profile {
+            max-width: 50%;
+            &__title {
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: .25rem;
+                line-height: 1.5;
+                margin-bottom: 20px;
+                
+                &__detail{
+                    margin-top: 20px;
+                    font-weight: bold;
+                    
+                }
+            }
+        }
+        &__skills {
+            max-width: 50%;
+            &__toolBar{
+                list-style: none;
+                margin-top: 20px;
+            }
+            
+            
+            &__li{
+                height: 1rem;
+                background: #a1a1a1;
+                width: 450px;
+                margin-bottom: 45px;
+                padding: 0;
+                position: relative;
+            }
+            &__scale{
+                background: #313131;
+                position: relative;
+                width: 100%;
+                
+            }
+            
+        }
+    }
+}
+
+.percentage60{
+    width: 60%;
+    height: 1rem;
+    background: #313131;
+    color: white;
+    font-size: 10px;
+    text-align: right;
+    
+}
+.percentage70{
+    width: 70%;
+    height: 1rem;
+    background: #313131;
+    color: white;
+    font-size: 10px;
+    text-align: right;
+    
+}
+.percentage75{
+    width: 75%;
+    height: 1rem;
+    background: #313131;
+    color: white;
+    font-size: 10px;
+    text-align: right;
+    
+}
+.percentage80{
+    width: 80%;
+    height: 1rem;
+    background: #313131;
+    color: white;
+    font-size: 10px;
+    text-align: right;
+    
+}
+.percentage90{
+    width: 90%;
+    height: 1rem;
+    background: #313131;
+    color: white;
+    font-size: 10px;
+    text-align: right;
+    
+}
+
+
+// CREDENTIALS  SECTION
+.credentials {
+    padding-bottom: 5%;        
+    background-color: #ebebeb;
+    &__title {
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 5%;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+    &__experience {
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 5% 10%;
+        &__title {
+            color: rgb(52, 211, 235);
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        &__text{
+            margin-top: 20px;
+        }
+    }
+    &__education {
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 0 10% 5%;
+        &__title {
+            color: rgb(52, 211, 235);
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        &__container{
+            margin: 0 auto;
+            color: #6e6e6e;
+            max-width: 70%;
+            &__course{
+                max-width: 28%;
+            }
+            
+            &__university{
+                max-width: 380px;
+                
+            }
+            
+            &__icon{
+                margin: 0 15%;
+            }
+            
+            &__box{
+                display: flex;
+                padding-top: 40px;
+                position: relative; 
+                &::after{
+                    content: "";
+                    display: block;
+                    width: 1px;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.1);
+                    position: absolute;
+                    left: 40%;
+                    top: 50%;                        
+                }
+            }
+        }
+    }
+}
+.credenIcon{
+    height: 3.8rem;
+    width: 3.8rem;
+    line-height: 3.8rem;
+    background: #313131;
+    border-radius: 50%;
+    text-align: center;
+    color: #FFFFFF;
+    position: absolute;
+    left: 35%;
+    // top: .9rem;
+    // margin-left: -2.4rem;
+    z-index: 999;
+}
+.left{
+    text-align: left;
+    
+}
+
+// PORTFOLIO
+.portfolio {
+    // height: 700px;
+    &__text {
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 5%;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+    &__slider{
+        width: 1000px;
+        height: 400px;
+        margin: 0 auto;
+    }
+}
+.my-slider{
+    margin: 50px 0;
+    padding: 0 100px;
+    position: relative;
+    
+    &__item{
+        text-align: center;
+        opacity: 0.5;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    &__img{
+        width: 600px;
+    }
+}
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    
+}
+.slick-dots > li{
+    list-style-type: disc;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.slick-arrow {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    right: 10%;
+    line-height: 1.5;
+    border-radius: 50%;
+    z-index: 10;
+    font-size: 20px;
+    opacity: .55;
+    color: white;
+    background-color: grey;
+    cursor: pointer;  
+    &:hover{
+        opacity: 1;        
+    }      
+    
+}
+
+.slick-prev {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    right: 10%;
+    line-height: 1.5;
+    border-radius: 50%;
+    z-index: 10;
+    font-size: 20px;
+    opacity: .55;
+    color: white;
+    background-color: grey;
+    cursor: pointer;
+    left: 10%;
+    
+    
+    &::before{
+        content: '←';
+        position: absolute;
+        
+        top: 0%;
+        left: 10%;
+        line-height: 1.4;
+        border-radius: 50%;
+        z-index: 10;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+        
+        
+        
+    }
+    
+}
+
+.slick-next {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    right: 10%;
+    line-height: 1.5;
+    border-radius: 50%;
+    z-index: 10;
+    font-size: 20px;
+    opacity: .55;
+    color: white;
+    background-color: grey;
+    cursor: pointer;
+    right: 10%;
+    
+    
+    &::before{
+        content: '→';
+        position: absolute;
+        top: 0%;
+        right: 10%;
+        line-height: 1.4;
+        border-radius: 50%;
+        z-index: 10;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+        
+    }
+}
+
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-track {
+    display: flex;
+    justify-content: center;
+}
+
+li > button{
+    visibility: hidden;
+}
+
+// FOOTER
+p{
+    font-size: 1.3rem;
+    color: #6e6e6e;
+    
+}
+footer {
+    // height: 400px;
+    background-color: black;
+}
+
+.contacts {
+    margin: 0 auto;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    padding-top: 5%;
+    &__box{
+        display: flex;
+        justify-content: space-around;
+        // max-width: 90%;
+        padding: 2%  10% 0% 10%;
+        display: flex;
+        text-align: center; 
+        
+        &__address{
+            // margin-right: 20%;
+            &__find{
+                color: rgb(52, 211, 235);
+                font-size: 20px;
+                margin-top: 20px;
+            }
+            &__city{
+                font-size: 18px;
+                
+            }
+            &__copyright{
+                font-size: 10px;
+                margin-top: 80px;
+            }
+        }
+        
+        &__email{
+            text-align: center; 
+            
+            &__mail{
+                font-size: 18px;
+                text-decoration: underline;
+                
+            }
+            &__text{
+                color: rgb(52, 211, 235);
+                font-size: 20px;
+                margin-top: 20px;
+                
+            }
+            
+            &__social{
+                padding-bottom: 10%;
+                
+                &__icons{
+                    display: flex;
+                    justify-content: center; 
+                    margin-top: 80px;
+                    
+                }
+            }
+        }
+    }
+}
+
