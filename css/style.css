@@ -325,7 +325,7 @@ i {
 .credentials__education {
   max-width: 80%;
   margin: 0 auto;
-  padding: 0 10% 5%;
+  padding: 0px 10% 5%;
 }
 
 .credentials__education__title {
@@ -336,13 +336,25 @@ i {
 }
 
 .credentials__education__container {
+  position: relative;
   margin: 0 auto;
   color: #6e6e6e;
-  max-width: 70%;
+  max-width: 1000px;
+}
+
+.credentials__education__container::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 300px;
+  top: 40px;
 }
 
 .credentials__education__container__course {
-  max-width: 28%;
+  max-width: 180px;
 }
 
 .credentials__education__container__university {
@@ -358,18 +370,6 @@ i {
   display: -ms-flexbox;
   display: flex;
   padding-top: 40px;
-  position: relative;
-}
-
-.credentials__education__container__box::after {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.1);
-  position: absolute;
-  left: 40%;
-  top: 50%;
 }
 
 .credenIcon {
@@ -381,8 +381,9 @@ i {
   text-align: center;
   color: #FFFFFF;
   position: absolute;
-  left: 35%;
+  left: 170px;
   z-index: 999;
+  margin-left: 100px;
 }
 
 .left {

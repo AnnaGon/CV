@@ -314,7 +314,7 @@ i{
     &__education {
         max-width: 80%;
         margin: 0 auto;
-        padding: 0 10% 5%;
+        padding: 0px 10% 5%;
         &__title {
             color: rgb(52, 211, 235);
             font-size: 1.5rem;
@@ -322,11 +322,22 @@ i{
             text-align: center;
         }
         &__container{
+            position: relative;
             margin: 0 auto;
             color: #6e6e6e;
-            max-width: 70%;
+            max-width: 1000px;
+            &::before{
+                content: "";
+                display: block;
+                width: 1px;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.1);
+                position: absolute;
+                left: 300px;
+                top: 40px;
+            }
             &__course{
-                max-width: 28%;
+                max-width: 180px;
             }
             
             &__university{
@@ -336,22 +347,14 @@ i{
             
             &__icon{
                 margin: 0 15%;
+                
             }
             
             &__box{
                 display: flex;
                 padding-top: 40px;
-                position: relative; 
-                &::after{
-                    content: "";
-                    display: block;
-                    width: 1px;
-                    height: 100%;
-                    background: rgba(0, 0, 0, 0.1);
-                    position: absolute;
-                    left: 40%;
-                    top: 50%;                        
-                }
+                // position: relative; 
+                
             }
         }
     }
@@ -365,10 +368,10 @@ i{
     text-align: center;
     color: #FFFFFF;
     position: absolute;
-    left: 35%;
-    // top: .9rem;
-    // margin-left: -2.4rem;
+    left: 170px;
     z-index: 999;
+    margin-left: 100px;                       
+    
 }
 .left{
     text-align: left;
